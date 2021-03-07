@@ -1,0 +1,10 @@
+metadata:
+  labels:
+    some-label: java
+spec:
+  containers:
+    - name: java
+      image: openjdk:8-alpine
+      command:
+        - cat
+      tty: true
