@@ -1,4 +1,7 @@
 pipeline {
+    options {
+        quietPeriod 0
+    }
     agent {
         kubernetes {
             yamlFile 'agent.yaml'
