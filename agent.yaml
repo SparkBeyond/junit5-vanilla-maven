@@ -8,3 +8,11 @@ spec:
       command:
         - cat
       tty: true
+      volumeMounts:
+        - mountPath: /root/.gradle
+          name: gradle
+  volumes:
+    - name: gradle
+      hostPath:
+        path: /data/cache/gradle/
+        type: DirectoryOrCreate
