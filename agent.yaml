@@ -11,6 +11,9 @@ spec:
       volumeMounts:
         - mountPath: /root/.gradle
           name: gradle
+      resources:
+        requests:
+          cpu: "1000m"
   volumes:
     - name: gradle
       hostPath:
