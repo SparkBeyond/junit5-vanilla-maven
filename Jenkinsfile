@@ -1,6 +1,7 @@
 pipeline {
     options {
         quietPeriod 0
+        disableConcurrentBuilds()
     }
     agent {
         kubernetes {
