@@ -4,15 +4,12 @@ pipeline {
         timestamps()
     }
     agent {
-        kubernetes {
-            yamlFile 'agent.yaml'
-            defaultContainer('java')
-        }
+        label 'master'
     }
     stages {
         stage('Test') {
             steps {
-                sh './gradlew clean test'
+                echo 'run test'
             }
             post {
                 always {
